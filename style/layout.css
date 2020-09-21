@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* JUST TEST */
+
+.test-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.test {
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+}
+
+body {
+    color: white;
+}
+
+.result {
+    display: none;
+    margin-top: 1em;
+    font-size: 1.5em;
+    /* background-color: orangered; */
+    color: rgb(9, 79, 136)
+}
+
+.wrapper {
+    margin-bottom: 1em;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 25%;
+    height: 100vh;
+    margin: auto;
+    background-color: #659ec5;
+}
+
+@media screen and (max-width:1500px) {
+    .wrapper {
+        width: 40%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .wrapper {
+        width: 40%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .wrapper {
+        width: 50%;
+        margin: auto;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.title {
+    color: white;
+    font-size: 3em;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.cards-container {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.card {
+    /* height: 33.333%; */
+    /* width: 25%; */
+    height: 70px;
+    width: 70px;
+    font-size: 3em;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    /* color:blue; */
+    padding: 7px;
+    color: #659ec5;
+    background-color: rgba(245, 240, 240, 0.657);
+}
+
+.card-back {
+    padding: 5px;
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.outcome {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#shuffleBtn {
+    display: none;
+    color: white;
+    background-color: #2980b9;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: ;
+}
